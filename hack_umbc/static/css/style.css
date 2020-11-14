@@ -454,3 +454,32 @@ box-shadow: 0 0 5px #000
         margin: 14px;
     }
 }
+
+/********************************************************************************************/
+
+.ocr_form{
+  margin-top: 10vh;
+}
+
+.ocr_form .submit-button{
+  border: none;
+  color: white;
+  padding: 15px 10px;
+  background: rgba(54, 111, 255, 0.7);
+  display: inline-block;
+  border-radius: .8rem;
+}
+
+.ocr_output{
+  margin-top: 10vh;
+}
+
+.ocr_output button{
+  border: none;
+  color: white;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(54, 111, 255, 0.7);
+  display: inline-block;
+  border-radius: .8rem;
+}

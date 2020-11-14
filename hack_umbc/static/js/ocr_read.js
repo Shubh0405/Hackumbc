@@ -1,12 +1,12 @@
 function textToAudio() {
-    // var text = '';
-    var text = document.getElementById("text_output").textContent;
+    var text = '';
+    var x = document.querySelectorAll(".text_output");
     cancelAudio();
     let speech = new SpeechSynthesisUtterance();
-    // var i;
-    // for (i = 0; i < x.length; i++) {
-    //     text = text + x[i].textContent;
-    // }
+    var i;
+    for (i = 0; i < x.length; i++) {
+        text = text + x[i].textContent;
+    }
     // var voices = speech.getVoices;
     speech.lang = "en-US";
     // speech.voice = voices[1];

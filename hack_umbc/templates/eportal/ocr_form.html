@@ -2,12 +2,19 @@
 {% load static %}
 {% block content %}
 
-<form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data" >
-  {% csrf_token %}
-  <p>Upload File: <input type="file" name="ocr_file"> </p>
+<div class="ocr_form">
+  <div class="container">
+  <h1>Revoice</h1>
+  <p>Ocr based feature to convert your uploaded pdf file into audio book.</p>
   <br>
-  <input type="submit" name="" value="submit">
-</form>
+ <form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data" >
+   {% csrf_token %}
+   <p>Upload File (Max-pages: 10): <input type="file" name="ocr_file"> </p>
+   <br>
+   <input type="submit" name="" value="submit" class="submit-button">
+ </form>
+</div>
+</div>
 
 {% endblock %}
 

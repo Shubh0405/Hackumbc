@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data" >
+          {% csrf_token %}
+          <p>Upload File: <input type="file" name="ocr_file"> </p>
+          <br>
+          <input type="submit" name="" value="submit">
+        </form>
+    </body>
+</html>

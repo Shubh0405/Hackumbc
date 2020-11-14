@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="{% static 'js/annyang.min.js' %}"></script>
+    </head>
+    <body>
+        <p id="text_output"> {{ output }} </p>
+        <!-- {% for text in output %} -->
+        <!-- <pre class="text_output">{{ text }}</pre> -->
+        <!-- {% endfor %} -->
+        <div><button type="button" onclick="textToAudio()">Speak</button></div>
+		<div><button type="button" onclick="pauseAudio()">Pause</button></div>
+		<div><button type="button" onclick="resumeAudio()">Resume</button></div>
+		<div><button type="button" onclick="cancelAudio()">Stop</button></div>
+		<!-- <div><button type="button" onclick="speakcommand()">Speak</button></div> -->
+        <script src="{% static 'js/ocr_read.js' %}"></script>
+    </body>
+</html>

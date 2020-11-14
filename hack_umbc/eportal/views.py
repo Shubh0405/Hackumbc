@@ -11,3 +11,6 @@ def ocr_output(request):
             file = request.FILES['ocr_file']
             final_output = main_url(file)
             return render(request,'eportal/ocr_output.html',{'output':final_output[0]})
+
+def index(request):
+    return render(request,'eportal/index.html',{})

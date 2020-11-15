@@ -1,37 +1,45 @@
 {% extends 'eportal/base.html' %}
 {% load static %}
+{% block css_content %}
+<link rel="stylesheet" href="{% static 'css/synthesizer.css' %}">
+{% endblock %}
 {% block content %}
 
+<div class="banner">
+    <img class="banner_background" src="{% static 'images/img41.jpg' %}" alt="">
+    <div class="content">
         <div class="speech-writer-content">
-          <div class="container mt-3">
-              <h3 class="text-center">Voice Synthesizer</h3>
-              <div id="info"></div>
-              <div class="float-right">
-                <button id="start_button">
-                  <img id="start_img" src="{% static 'images/mic.gif' %}" alt="Start"></button>
-              </div>
-              <div id="results">
-                <span id="final_span" class="final"></span>
-                <span id="interim_span" class="interim"></span>
-                <p>
-              </div>
-              <div class="row col-12 p-0 m-0">
-                <div class="row col-12 col-md-8 col-lg-6 p-0 m-0">
-                    <select id="select_language"></select>
-                    <select id="select_dialect"></select>
+            <div class="container mt-3">
+                <h3 class="text-center">Voice Synthesizer</h3>
+                <div id="info"></div>
+                <div class="float-right">
+                    <button id="start_button">
+                        <img id="start_img" src="{% static 'images/mic.gif' %}" alt="Start"></button>
                 </div>
-                <div class="col-12 col-md-4 col-lg-6 mt-3 mt-md-0 p-0 m-0">
-                  <div class="float-right">
-                    <button id="copy_button" class="btn btn-primary">Copy</button>
-                    <button class="btn btn-primary" onclick="speakcommand()">Speak Command</button>
-                    <button class="btn btn-primary" onclick="readcommand()">Read Content</button>
-                  </div>
+                <div id="results">
+                    <span id="final_span" class="final"></span>
+                    <span id="interim_span" class="interim"></span>
+                    <p>
                 </div>
-              </div>
-          </div>
+                <div class="row col-12 p-0 m-0">
+                    <div class="row col-12 col-md-8 col-lg-6 p-0 m-0">
+                        <select id="select_language"></select>
+                        <select id="select_dialect"></select>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-6 mt-3 mt-md-0 p-0 m-0">
+                        <div class="float-right">
+                            <button id="copy_button" class="btn btn-primary">Copy</button>
+                            <button class="btn btn-primary" onclick="speakcommand()">Speak Command</button>
+                            <button class="btn btn-primary" onclick="readcommand()">Read Content</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</div>
 
-  <script src="{% static 'js/languages.js' %}"></script>
-  <script src="{% static 'js/speech.js' %}"></script>
+<script src="{% static 'js/languages.js' %}"></script>
+<script src="{% static 'js/speech.js' %}"></script>
 
 {% endblock %}

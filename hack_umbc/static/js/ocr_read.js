@@ -1,16 +1,9 @@
 function textToAudio() {
-    var text = '';
-    var x = document.querySelectorAll(".text_output");
+    var x = document.getElementById("text_output").textContent;
     cancelAudio();
     let speech = new SpeechSynthesisUtterance();
-    var i;
-    for (i = 0; i < x.length; i++) {
-        text = text + x[i].textContent;
-    }
-    // var voices = speech.getVoices;
     speech.lang = "en-US";
-    // speech.voice = voices[1];
-    speech.text = text;
+    speech.text = x;
     speech.volume = 1;
     speech.rate = 0.7;
     speech.pitch = 1;

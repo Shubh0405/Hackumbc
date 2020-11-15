@@ -1,35 +1,29 @@
 {% extends 'eportal/base.html' %}
 {% load static %}
+{% block css_content %}
+<link rel="stylesheet" href="{% static 'css/ocr_form.css' %}">
+{% endblock %}
 {% block content %}
 
-<div class="ocr_form">
-  <div class="container">
-  <h1>Revoice</h1>
-  <p>Ocr based feature to convert your uploaded pdf file into audio book.</p>
-  <br>
- <form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data" >
-   {% csrf_token %}
-   <p>Upload File (Max-pages: 10): <input type="file" name="ocr_file"> </p>
-   <br>
-   <input type="submit" name="" value="submit" class="submit-button">
- </form>
+<div class="banner">
+    <img class="banner_background" src="{% static 'images/ocr_form.jpg' %}" alt="">
+    <div class="content">
+        <div class="ocr_form">
+            <div class="container">
+                <h1>Revoice</h1>
+                <p>Ocr based feature to convert your uploaded pdf file into audio book.</p>
+                <br>
+                <form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="file">Upload File (Max-pages: 10):</label>
+                    <input type="file" id="file" name="ocr_file" accept="application/pdf" />
+                    <br>
+                    <input type="submit" name="" value="submit" class="submit-button">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
+
 
 {% endblock %}
-
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
-        <form action="{% url 'eportal:ocr_output' %}" method="post" enctype="multipart/form-data" >
-          {% csrf_token %}
-          <p>Upload File: <input type="file" name="ocr_file"> </p>
-          <br>
-          <input type="submit" name="" value="submit">
-        </form>
-    </body>
-</html> -->

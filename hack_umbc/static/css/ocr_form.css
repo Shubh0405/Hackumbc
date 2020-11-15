@@ -1,0 +1,44 @@
+.banner{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  transform: rotateY(-4rem);
+}
+
+.banner_background{
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  background-attachment: fixed;
+}
+
+.banner .content{
+  position: relative;
+  max-width: 750px;
+  text-align: center;
+  color: white;
+}
+
+.banner .content h1{
+  font-size: 50px;
+  font-weight: 1000;
+}
+
+.banner .content p{
+  font-size: 30px;
+}
+
+.banner .content .form_field{
+  font-size: 20px;
+}

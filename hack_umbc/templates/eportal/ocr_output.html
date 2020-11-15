@@ -4,36 +4,15 @@
 <script src="{% static 'js/annyang.min.js' %}"></script>
 
 <div class="ocr_output">
-  <div class="container">
-    {% for text in output %}
-        <pre class="text_output">{{ text }}</pre>
-    {% endfor %}
-
-<button type="button" onclick="textToAudio()">Speak</button>
-<button type="button" onclick="pauseAudio()">Pause</button>
-<button type="button" onclick="resumeAudio()">Resume</button>
-<button type="button" onclick="cancelAudio()">Stop</button>
-</div>
+    <div class="container">
+        <pre class="text_output" id="text_output">{{ output }}</pre>
+        <button type="button" onclick="textToAudio()">Speak</button>
+        <button type="button" onclick="pauseAudio()">Pause</button>
+        <button type="button" onclick="resumeAudio()">Resume</button>
+        <button type="button" onclick="cancelAudio()">Stop</button>
+    </div>
 </div>
 
 <script src="{% static 'js/ocr_read.js' %}"></script>
 
 {% endblock %}
-<!-- <!DOCTYPE html>
-{% load static %}
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-        <script src="{% static 'js/annyang.min.js' %}"></script>
-    </head>
-    <body>
-        <pre id="text_output"> {{ output }} </pre>
-        <div><button type="button" onclick="textToAudio()">Speak</button></div>
-		<div><button type="button" onclick="pauseAudio()">Pause</button></div>
-		<div><button type="button" onclick="resumeAudio()">Resume</button></div>
-		<div><button type="button" onclick="cancelAudio()">Stop</button></div>
-		<div><button type="button" onclick="speakcommand()">Speak</button></div>
-        <script src="{% static 'js/ocr_read.js' %}"></script>
-    </body>
-</html> -->

@@ -67,17 +67,17 @@ $(document).ready(function() {
         recognition.onstart = function() {
             recognizing = true;
             showInfo('speak_now');
-            start_img.src = "{% static 'images/mic-animation.gif' %}";
+            start_img.src = "../static/images/mic-animation.gif";
         };
 
         recognition.onerror = function(event) {
             if (event.error == 'no-speech') {
-                start_img.src = "{% static 'images/mic.gif' %}";
+                start_img.src = "../static/images/mic.gif";
                 showInfo('no_speech');
                 ignore_onend = true;
             }
             if (event.error == 'audio-capture') {
-                start_img.src = "{% static 'images/mic.gif' %}";
+                start_img.src = "../static/images/mic.gif";
                 showInfo('no_microphone');
                 ignore_onend = true;
             }
@@ -96,7 +96,7 @@ $(document).ready(function() {
             if (ignore_onend) {
                 return;
             }
-            start_img.src = "{% static 'images/mic.gif' %}";
+            start_img.src = "../static/images/mic.gif";
             if (!final_transcript) {
                 showInfo('start');
                 return;
@@ -195,7 +195,7 @@ $("#start_button").click(function() {
     ignore_onend = false;
     final_span.innerHTML = '';
     interim_span.innerHTML = '';
-    start_img.src = "{% static 'images/mic-slash.gif' %}";
+    start_img.src = "../static/images/mic-slash.gif";
     showInfo('allow');
     start_timestamp = event.timeStamp;
 });
@@ -240,7 +240,7 @@ if (annyang) {
             ignore_onend = false;
             final_span.innerHTML = '';
             interim_span.innerHTML = '';
-            start_img.src = "{% static 'images/mic-slash.gif' %}";
+            start_img.src = "../static/images/mic-slash.gif";
             showInfo('allow');
             start_timestamp = event.timeStamp;
             console.log("hello");

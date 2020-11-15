@@ -24,17 +24,17 @@
 
 <body>
     <nav>
-        <label class="logo"><a href="{% url 'eportal:home' %}">
+        <label class="logo"><a href="{% url 'eportal:home' %}" id="home_page">
                 <p>SAARTHI</p>
             </a></label>
         <ul class="nav-links">
-            <li id="toau"><a href="{% url 'eportal:ocr_page' %}">
+            <li id="toau"><a href="{% url 'eportal:ocr_page' %}" id="revoice_page">
                     <p>Revoice</p>
                 </a></li>
-            <li id="todom"><a href="{% url 'eportal:synthesizer' %}">
+            <li id="todom"><a href="{% url 'eportal:synthesizer' %}" id="synthesiser_page">
                     <p>Voice Synthesiser</p>
                 </a></li>
-            <li id="todom"><a href="#">
+            <li id="todom"><a href="#" id="our_vision">
                     <p>Our Vision</p>
                 </a></li>
         </ul>

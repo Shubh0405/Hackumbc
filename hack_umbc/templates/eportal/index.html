@@ -1,7 +1,7 @@
 {% extends 'eportal/base.html' %}
 {% load static %}
 {% block content %}
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<button onclick="speakcommand()" id="myBtn" title="Go to top"><i class="fas fa-microphone"></i></button>
 <div class="banner">
     <img class="banner_background" src="{% static 'images/landing.jpg' %}" alt="">
     <div class="content">
@@ -169,6 +169,5 @@
 <div class="footer">
     <h5>Made in HackUMBC 2020 by team index.html</h5>
 </div>
-
-
+<script src="{% static 'js/home_page.js' %}"></script>
 {% endblock %}

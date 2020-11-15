@@ -23,23 +23,35 @@ function cancelAudio() {
     window.speechSynthesis.cancel();
 }
 
-// if (annyang) {
-//     // Add our commands to annyang
-//     annyang.addCommands({
-//         'hello': function() {
-//             alert('Hello world!');
-//         },
-//         'start reading': textToAudio,
-//         'pause reading': pauseAudio,
-//         'resume reading': resumeAudio,
-//         'stop reading': cancelAudio,
-//     });
-//
-//     // Start listening. You can call this here, or attach this call to an event, button, etc.
-// }
-//
-// function speakcommand() {
-//     annyang.start({
-//         autoRestart: false
-//     });
-// }
+if (annyang) {
+    // Add our commands to annyang
+    annyang.addCommands({
+        'Go to Voice': () => {
+            document.getElementById('revoice_page').click()
+        },
+        'Go to Synthesizer': () => {
+            document.getElementById('synthesiser_page').click()
+        },
+        'Go to Our Vision': () => {
+            document.getElementById('our_vision').click()
+        },
+        'Scroll Down': () => {
+            window.scrollBy(0, 500)
+        },
+        'Scroll Down': () => {
+            window.scrollBy(0, -500)
+        },
+        'start reading': textToAudio,
+        'pause reading': pauseAudio,
+        'resume reading': resumeAudio,
+        'stop reading': cancelAudio,
+    });
+
+    // Start listening. You can call this here, or attach this call to an event, button, etc.
+}
+
+function speakcommand() {
+    annyang.start({
+        autoRestart: false
+    });
+}

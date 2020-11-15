@@ -1,7 +1,7 @@
 {% extends 'eportal/base.html' %} {% load static %} {% block css_content %}
 <link rel="stylesheet" href="{% static 'css/synthesizer.css' %}" />
 {% endblock %} {% block content %}
-
+<button onclick="speakcommand()" id="myBtn" title="Go to top"><i class="fas fa-microphone"></i></button>
 <div class="banner">
     <img class="banner_background" src="{% static 'images/img41.jpg' %}" alt="" />
     <div class="content">

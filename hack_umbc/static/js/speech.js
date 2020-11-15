@@ -220,16 +220,41 @@ function showInfo(s) {
 if (annyang) {
     // Let's define a command.
     const commands = {
-        'about us': () => {
-            document.getElementById('about-us').click()
+        'Go to Home': () => {
+            document.getElementById('home_page').click()
         },
-        'synthesiser': () => {
-            document.getElementById('synthesiser').click()
+        'Go to Voice': () => {
+            document.getElementById('revoice_page').click()
         },
-        'library': () => {
-            document.getElementById('library').click()
+        'Go to Synthesizer': () => {
+            document.getElementById('synthesiser_page').click()
+        },
+        'Go to Our Vision': () => {
+            document.getElementById('our_vision').click()
+        },
+        'Scroll Down': () => {
+            window.scrollBy(0, 500)
+        },
+        'Scroll Down': () => {
+            window.scrollBy(0, -500)
         },
         'start typing': () => {
+            if (recognizing) {
+                recognition.stop();
+                return;
+            }
+            final_transcript = '';
+            recognition.lang = select_dialect.value;
+            recognition.start();
+            ignore_onend = false;
+            final_span.innerHTML = '';
+            interim_span.innerHTML = '';
+            start_img.src = "../static/images/mic-slash.gif";
+            showInfo('allow');
+            start_timestamp = event.timeStamp;
+            console.log("hello");
+        },
+        'stop typing': () => {
             if (recognizing) {
                 recognition.stop();
                 return;

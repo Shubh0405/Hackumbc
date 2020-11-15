@@ -1,3 +1,7 @@
+.content{
+    width: 80%;
+}
+
 #info a {
   color: darkred;
   text-decoration: underline;
@@ -31,7 +35,6 @@
 }
 
 .btn-primary {
-  width: 100px;
   margin: auto;
 }
 
@@ -41,6 +44,7 @@ select {
 
 .speech-writer-content{
   margin-top: 150px;
+  width: 100%;
 }
 
 @media screen and (max-width: 767px) {

@@ -172,8 +172,9 @@ nav ul li a:hover {
 }
 
 .banner .content h1{
-  font-size: 50px;
+  font-size: 100px !important;
   font-weight: 1000;
+  letter-spacing: 4px;
 }
 
 .banner .content p{

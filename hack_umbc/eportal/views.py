@@ -14,3 +14,6 @@ def ocr_output(request):
 
 def index(request):
     return render(request,'eportal/index.html',{})
+
+def synthesizer(request):
+    return render(request,'eportal/synthsizer.html',{})

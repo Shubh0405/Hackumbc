@@ -1,5 +1,8 @@
 if (annyang) {
-    const commands = {
+    annyang.addCommands({
+        'Go to Home': () => {
+            document.getElementById('home_page').click()
+        },
         'Go to Voice': () => {
             document.getElementById('revoice_page').click()
         },
@@ -15,10 +18,7 @@ if (annyang) {
         'Scroll Up': () => {
             window.scrollBy(0, -500)
         },
-    };
-
-    // Add our commands to annyang
-    annyang.addCommands(commands);
+    });
 }
 
 function speakcommand() {

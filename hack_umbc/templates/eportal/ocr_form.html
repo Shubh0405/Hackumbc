@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{% static 'css/ocr_form.css' %}">
 {% endblock %}
 {% block content %}
-
+<button onclick="speakcommand()" id="myBtn" title="Voice Controller"><i class="fas fa-microphone"></i></button>
 <div class="banner">
     <img class="banner_background" src="{% static 'images/ocr_form.jpg' %}" alt="">
     <div class="content">
@@ -18,12 +18,12 @@
                     <label for="file">Upload File (Max-pages: 10):</label>
                     <input type="file" id="file" name="ocr_file" accept="application/pdf" />
                     <br>
-                    <input type="submit" name="" value="submit" class="submit-button">
+                    <input type="submit" name="" value="submit" class="submit-button" id="submit">
                 </form>
             </div>
         </div>
     </div>
 </div>
 
-
+<script src="{% static 'js/ocr_form.js' %}"></script>
 {% endblock %}

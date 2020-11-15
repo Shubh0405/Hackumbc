@@ -20,3 +20,6 @@ def index(request):
 
 def synthesizer(request):
     return render(request,'eportal/synthsizer.html',{})
+
+def our_vision(request):
+    return render(request,'eportal/our_vision.html',{})    

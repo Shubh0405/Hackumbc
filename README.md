@@ -1,6 +1,7 @@
 # Hackumbc
 Repository for hack umbc
 ## SAARTHI
+An portal for the education of the visually impaired
 Majority of education and textbooks never reach the visually impaired, leaving them behind in the lore of literacy. Introducing SAARTHI, a platform for the education of the visually impaired. During this period of pandemic the visually impaired don’t have any kind of access to education in person. Hence, a need of a portal arises via which these people could continue their education. With SAARTHI we want to give them the right to education. These people who are left out, will get the resources and the opportunity to gain knowledge from all the available text books out there. This is a school of hard knocks with a ride in the short bus. This just doesn’t stick to this pandemic period, rather it also extends to help out those children as well who are not in an able condition to move to their place of education.
 
 **“It shouldn’t matter how slowly some children learn as long as we are encouraging them not to stop.” – Robert John Meehan**
